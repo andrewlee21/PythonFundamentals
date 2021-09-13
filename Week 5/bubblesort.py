@@ -5,14 +5,19 @@ def bubblesort(the_list):
 
     for i in range(high_idx):
         for j in range(high_idx):
+            list_changed=False
             item = the_list[j]
             next = the_list[j+1]
 
             if item > next:
                 the_list[j] = next
                 the_list[j+1] = item
+                list_changed=True
 
             print(the_list, i, j)
-            
+            print(list_changed)
+            if list_changed == False:
+                break
+        
 bubblesort(unsorted_list)
 
